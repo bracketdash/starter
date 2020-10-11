@@ -9,7 +9,7 @@
 import ChangeMessage from "../components/ChangeMessage.vue";
 
 export default {
-    name: "Home",
+    name: "About",
     components: {
         ChangeMessage,
     },
