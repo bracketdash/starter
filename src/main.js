@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
-import "./services/registerServiceWorker";
 import "./index.css";
+import "./services/registerServiceWorker";
 
 createApp(App).use(store).use(router).mount("#app");
