@@ -1,4 +1,4 @@
-# vue-cli-vue3
+# Vue 3 Project Template
 
 ## Project setup
 ```
