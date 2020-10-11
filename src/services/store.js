@@ -1,6 +1,17 @@
 import { createStore } from "vuex";
 
-export default createStore({
-    state: {},
-    mutations: {},
-});
+const state = {
+    message: "Hello, World!",
+};
+
+const getters = {
+    message: (state) => state.message,
+};
+
+const mutations = {
+    updateMessage(state, message) {
+        state.message = message;
+    },
+};
+
+export default createStore({ state, getters, mutations });
