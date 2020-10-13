@@ -9,7 +9,6 @@
 import ChangeMessage from "../components/ChangeMessage.vue";
 
 export default {
-    name: "About",
     components: {
         ChangeMessage,
     },
