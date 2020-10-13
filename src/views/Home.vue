@@ -9,7 +9,6 @@
 import MessageDisplay from "../components/MessageDisplay.vue";
 
 export default {
-    name: "Home",
     components: {
         MessageDisplay,
     },
