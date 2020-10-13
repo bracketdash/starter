@@ -6,7 +6,6 @@
 
 <script>
 export default {
-    name: "HelloWorld",
     computed: {
         message() {
             return this.$store.getters.message;
