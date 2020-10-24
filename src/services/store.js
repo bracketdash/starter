@@ -1,7 +1,4 @@
 import { createStore } from "vuex";
-import createPersistedState from "vuex-persistedstate";
-
-const plugins = [createPersistedState({ storage: window.sessionStorage })];
 
 const state = {
     message: "Hello, World!",
@@ -17,4 +14,4 @@ const mutations = {
     },
 };
 
-export default createStore({ plugins, state, getters, mutations });
+export default createStore({ state, getters, mutations });
