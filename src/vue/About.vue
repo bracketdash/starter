@@ -1,16 +1,20 @@
 <template>
-    <div class="about">
+    <div>
         <h1>This is the about page.</h1>
         <ChangeMessage />
     </div>
 </template>
 
 <script>
-import ChangeMessage from "../components/ChangeMessage.vue";
+import ChangeMessage from "./ChangeMessage.vue";
 
 export default {
+    name: "About",
     components: {
         ChangeMessage,
     },
 };
 </script>
+
+<style scoped>
+</style>

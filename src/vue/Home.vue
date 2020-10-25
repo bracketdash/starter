@@ -6,11 +6,15 @@
 </template>
 
 <script>
-import MessageDisplay from "../components/MessageDisplay.vue";
+import MessageDisplay from "./MessageDisplay.vue";
 
 export default {
+    name: "Home",
     components: {
         MessageDisplay,
     },
 };
 </script>
+
+<style scoped>
+</style>

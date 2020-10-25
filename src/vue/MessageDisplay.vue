@@ -6,6 +6,7 @@
 
 <script>
 export default {
+    name: "MessageDisplay",
     computed: {
         message() {
             return this.$store.getters.message;
@@ -13,3 +14,6 @@ export default {
     },
 };
 </script>
+
+<style scoped>
+</style>
