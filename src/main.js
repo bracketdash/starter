@@ -1,6 +1,9 @@
 import "./assets/global.css";
+
 import { createApp } from "vue";
-import App from "./vue/App.vue";
+
+import App from "./components/App.vue";
+
 import router from "./router";
 import store from "./store";
 

@@ -15,11 +15,8 @@ export default {
     },
     methods: {
         updateMessage(e) {
-            this.$store.commit('updateMessage', e.target.value);
-        }
+            this.$store.commit("updateMessage", e.target.value);
+        },
     },
 };
 </script>
-
-<style scoped>
-</style>
