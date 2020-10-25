@@ -1,5 +1,5 @@
 <template>
-    <div class="change-message">
+    <div>
         <p>Edit the home page message here:</p>
         <input :value="message" @input="updateMessage" />
     </div>
