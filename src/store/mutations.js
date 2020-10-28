@@ -1,4 +1,4 @@
-export const mutations = {
+export default {
     setMessage(state, message) {
         state.message = message;
     },
