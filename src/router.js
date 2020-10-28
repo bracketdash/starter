@@ -1,18 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import About from "./components/About.vue";
-import Home from "./components/Home.vue";
-
 const history = createWebHistory(process.env.BASE_URL);
 
 const routes = [
     {
         path: "/",
-        component: Home,
+        component: () => import("./components/Home.vue"),
     },
     {
         path: "/about",
-        component: About,
+        component: () => import("./components/About.vue"),
     },
 ];
 
