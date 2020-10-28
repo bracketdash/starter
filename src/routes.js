@@ -1,8 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
-
-const history = createWebHistory(process.env.BASE_URL);
-
-const routes = [
+export const routes = [
     {
         path: "/",
         component: () => import("./components/Home.vue"),
@@ -12,5 +8,3 @@ const routes = [
         component: () => import("./components/About.vue"),
     },
 ];
-
-export default createRouter({ history, routes });
