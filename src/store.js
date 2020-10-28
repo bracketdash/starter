@@ -4,14 +4,10 @@ const state = {
     message: "Hello, World!",
 };
 
-const getters = {
-    message: (state) => state.message,
-};
-
 const mutations = {
-    updateMessage(state, message) {
+    setMessage(state, message) {
         state.message = message;
     },
 };
 
-export default createStore({ state, getters, mutations });
+export default createStore({ state, mutations });
