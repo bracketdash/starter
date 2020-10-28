@@ -5,12 +5,12 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
     name: "MessageDisplay",
     computed: {
-        message() {
-            return this.$store.state.message;
-        },
+        ...mapState(["message"]),
     },
 };
 </script>

@@ -6,12 +6,12 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
     name: "ChangeMessage",
     computed: {
-        message() {
-            return this.$store.state.message;
-        },
+        ...mapState(["message"]),
     },
     methods: {
         setMessage(e) {
