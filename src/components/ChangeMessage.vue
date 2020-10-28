@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>Edit the home page message here:</p>
-        <input :value="message" @input="updateMessage" />
+        <input :value="message" @input="setMessage" />
     </div>
 </template>
 
@@ -10,12 +10,12 @@ export default {
     name: "ChangeMessage",
     computed: {
         message() {
-            return this.$store.getters.message;
+            return this.$store.state.message;
         },
     },
     methods: {
-        updateMessage(e) {
-            this.$store.commit("updateMessage", e.target.value);
+        setMessage(e) {
+            this.$store.commit("setMessage", e.target.value);
         },
     },
 };
