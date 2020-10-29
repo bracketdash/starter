@@ -5,6 +5,6 @@ import sharedState from "./sharedState";
 
 const history = createWebHistory(process.env.BASE_URL);
 
-export const sharedState = reactive(sharedState);
-
 export const router = createRouter({ history, routes });
+
+export const sharedState = reactive(sharedState);
