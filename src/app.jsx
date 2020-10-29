@@ -14,4 +14,4 @@ const setup = () => () => (
     </div>
 );
 
-createApp({ name, setup }).app.use(router).mount("#app");
+createApp({ name, setup }).use(router).mount("#app");
