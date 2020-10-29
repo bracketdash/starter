@@ -1,15 +1,14 @@
 import MessageDisplay from "./MessageDisplay";
 import ChangeMessage from "./ChangeMessage";
 
-export default {
-    name: "Home",
-    setup() {
-        return () => (
-            <div>
-                <img alt="Vue logo" src="/images/logo.png" />
-                <MessageDisplay />
-                <ChangeMessage />
-            </div>
-        );
-    },
-};
+const name = "Home";
+
+const setup = () => () => (
+    <div>
+        <img alt="Vue logo" src="/images/logo.png" />
+        <MessageDisplay />
+        <ChangeMessage />
+    </div>
+);
+
+export default { name, setup };
