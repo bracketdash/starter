@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { reactive } from "vue";
 import routes from "./routes";
-import sharedStateSrc from "./sharedStateSrc";
+import sharedStateSrc from "./sharedState";
 
 const history = createWebHistory(process.env.BASE_URL);
 
