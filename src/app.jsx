@@ -1,4 +1,6 @@
 import "./styles/main.scss";
+import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
+import "@fortawesome/fontawesome-free/css/solid.min.css";
 import { createApp } from "vue";
 import { RouterLink, RouterView } from "vue-router";
 import router from "./services/router";
