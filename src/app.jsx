@@ -3,15 +3,18 @@ import { createApp } from "vue";
 import { RouterLink, RouterView } from "vue-router";
 import { router } from "./services";
 
-const name = "App";
+const app = createApp({
+    name: "App",
+    setup() {
+        return () => (
+            <div>
+                <div id="nav">
+                    <RouterLink to="/">Home</RouterLink> | <RouterLink to="/about">About</RouterLink>
+                </div>
+                <RouterView />
+            </div>
+        );
+    },
+});
 
-const setup = () => () => (
-    <div>
-        <div id="nav">
-            <RouterLink to="/">Home</RouterLink> | <RouterLink to="/about">About</RouterLink>
-        </div>
-        <RouterView />
-    </div>
-);
-
-createApp({ name, setup }).use(router).mount("#app");
+app.use(router).mount("#app");
