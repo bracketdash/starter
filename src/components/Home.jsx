@@ -1,4 +1,5 @@
 import MessageDisplay from "./MessageDisplay";
+import ChangeMessage from "./ChangeMessage";
 
 export default {
     name: "Home",
@@ -7,6 +8,7 @@ export default {
             <div>
                 <img alt="Vue logo" src="/images/logo.png" />
                 <MessageDisplay />
+                <ChangeMessage />
             </div>
         );
     },

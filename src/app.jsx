@@ -1,11 +1,7 @@
 import "./styles/main.scss";
-
 import { createApp } from "vue";
-
-import router from "./router";
-import store from "./store";
-
 import { RouterLink, RouterView } from "vue-router";
+import router from "./services/router";
 
 const app = createApp({
     name: "App",
@@ -21,4 +17,4 @@ const app = createApp({
     },
 });
 
-app.use(router).use(store).mount("#app");
+app.use(router).mount("#app");

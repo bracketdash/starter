@@ -1,13 +1,11 @@
-import { computed } from "vue";
-import store from "../store";
+import sharedState from "../services/sharedState";
 
 export default {
     name: "MessageDisplay",
     setup() {
-        const message = computed(() => store.state.message);
         return () => (
             <div>
-                <h1>{message.value}</h1>
+                <h1>{sharedState.message}</h1>
             </div>
         );
     },

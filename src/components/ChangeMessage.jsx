@@ -1,15 +1,15 @@
-import { computed } from "vue";
-import store from "../store";
+import sharedState from "../services/sharedState";
 
 export default {
     name: "ChangeMessage",
     setup() {
-        const message = computed(() => store.state.message);
-        const setMessage = (e) => store.commit("setMessage", e.target.value);
+        const setMessage = (e) => {
+            sharedState.message = e.target.value;
+        };
         return () => (
             <div>
                 <p>Edit the home page message here:</p>
-                <input value={message.value} onInput={setMessage} />
+                <input value={sharedState.message} onInput={setMessage} />
             </div>
         );
     },
