@@ -1,4 +1,4 @@
-import { sharedState } from "../services";
+import sharedState from "../services/sharedState";
 
 export default {
     name: "MessageDisplay",
