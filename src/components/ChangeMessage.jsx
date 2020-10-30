@@ -16,8 +16,8 @@ export default {
         return () => (
             <div>
                 <p>Edit the home page message here:</p>
-                <input value={localState.message} onInput={setLocalMessage} />
-                <div class="update-button">
+                <input defaultValue={localState.message} onInput={setLocalMessage} />
+                <div className="update-button">
                     <button onClick={setSharedMessage}>Change "{sharedState.message}" to "{localState.message}"</button>
                 </div>
             </div>
