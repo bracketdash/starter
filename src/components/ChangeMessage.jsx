@@ -17,8 +17,8 @@ export default {
             <div>
                 <p>Edit the home page message here:</p>
                 <input value={localState.message} onInput={setLocalMessage} />
-                <div style="text-align: center;">
-                    <button onClick={setSharedMessage}>Save Message</button>
+                <div>
+                    <button onClick={setSharedMessage}>Change "{sharedState.message}" to "{localState.message}"</button>
                 </div>
             </div>
         );
