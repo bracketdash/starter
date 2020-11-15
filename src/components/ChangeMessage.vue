@@ -29,3 +29,9 @@ export default {
     </div>
   </div>
 </template>
+
+<style scoped>
+.update-button {
+  margin-top: 20px;
+}
+</style>
