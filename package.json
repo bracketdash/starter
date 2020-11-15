@@ -1,19 +1,21 @@
 {
-    "name": "vue-app",
-    "version": "0.0.0",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "prod": "node ./server/app.js"
-    },
-    "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.15.1",
-        "vue": "^3.0.2",
-        "vue-router": "^4.0.0-rc.1"
-    },
-    "devDependencies": {
-        "express": "^4.17.1",
-        "postcss-preset-env": "^6.7.0",
-        "vite": "^1.0.0-rc.8"
-    }
+  "name": "vue-app",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prod": "node ./server/main.js",
+    "reset": "rm -rf dist node_modules && rm yarn.lock"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "vue": "^3.0.2",
+    "vue-router": "^4.0.0-rc.3"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.2",
+    "express": "^4.17.1",
+    "postcss-preset-env": "^6.7.0",
+    "vite": "^1.0.0-rc.9"
+  }
 }
