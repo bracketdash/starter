@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
+    "tailwindcss": "^1.9.6",
     "vue": "^3.0.2",
     "vue-router": "^4.0.0-rc.3"
   },

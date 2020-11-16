@@ -9,16 +9,17 @@ export default {
 
 <template>
   <div>
-    <div id="nav"><RouterLink to="/">Home</RouterLink> | <RouterLink to="/about">About</RouterLink></div>
+    <div id="nav" class="p-8">
+      <RouterLink to="/">Home</RouterLink> | <RouterLink to="/about">About</RouterLink>
+    </div>
     <RouterView />
   </div>
 </template>
 
 <style scoped>
 #nav {
-  padding: 30px;
   & a {
-    font-weight: bold;
+    @apply font-bold;
     color: #2c3e50;
     &.router-link-exact-active {
       color: #42b983;

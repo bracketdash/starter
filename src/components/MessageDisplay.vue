@@ -11,6 +11,6 @@ export default {
 
 <template>
   <div>
-    <h1>{{ sharedState.message }}</h1>
+    <h1 class="text-3xl">{{ sharedState.message }}</h1>
   </div>
 </template>
