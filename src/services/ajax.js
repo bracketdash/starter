@@ -4,8 +4,8 @@ export default (methodAndUrl, ajaxConfig) => {
   const params = new URLSearchParams(urlObj.search);
   const fetchConfig = Object.assign({ method }, ajaxConfig);
   if (fetchConfig.params) {
-    Object.keys(ajaxConfig.params).forEach((key) => {
-      params.set(key, ajaxConfig.params[key]);
+    Object.keys(fetchConfig.params).forEach((key) => {
+      params.set(key, fetchConfig.params[key]);
     });
     urlObj.search = params.toString();
     delete fetchConfig.params;
