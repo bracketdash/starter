@@ -9,9 +9,7 @@ export default {
 
 <template>
   <div>
-    <div id="nav" class="p-8">
-      <RouterLink to="/">Home</RouterLink> | <RouterLink to="/about">About</RouterLink>
-    </div>
+    <div id="nav" class="p-8"><RouterLink to="/">Home</RouterLink> | <RouterLink to="/about">About</RouterLink></div>
     <RouterView />
   </div>
 </template>
