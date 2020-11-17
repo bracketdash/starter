@@ -1,14 +1,24 @@
 <script>
-import { reactive } from "vue";
+import { reactive, watch } from "vue";
 
+import { loadMessageIfNotLoaded } from "../services/message";
 import sharedState from "../services/sharedState";
 
 export default {
   name: "ChangeMessage",
   setup() {
+    loadMessageIfNotLoaded();
     const localState = reactive({
       message: sharedState.message,
     });
+    watch(
+      () => sharedState.message,
+      (newVal, oldVal) => {
+        if (oldVal === localState.message) {
+          localState.message = newVal;
+        }
+      }
+    );
     const setLocalMessage = (e) => {
       localState.message = e.target.value;
     };

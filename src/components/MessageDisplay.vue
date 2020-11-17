@@ -1,9 +1,11 @@
 <script>
+import { loadMessageIfNotLoaded } from "../services/message";
 import sharedState from "../services/sharedState";
 
 export default {
   name: "MessageDisplay",
   setup() {
+    loadMessageIfNotLoaded();
     return { sharedState };
   },
 };
