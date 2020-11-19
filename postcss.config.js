@@ -5,7 +5,7 @@ module.exports = {
       future: {
         purgeLayersByDefault: true,
       },
-      purge: ["./src/components/*.vue", "./src/components/**/*.vue"],
+      purge: ["./src/**/*.vue"],
       theme: {
         extend: {},
       },
