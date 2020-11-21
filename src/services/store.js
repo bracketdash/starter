@@ -1,11 +1,11 @@
 import { createStore } from "vuex";
 
-import c from "./constants";
+import { INITIAL_MESSAGE } from "./constants";
 
 export default createStore({
   state() {
     return {
-      message: c.INITIAL_MESSAGE,
+      message: INITIAL_MESSAGE,
     };
   },
   mutations: {
