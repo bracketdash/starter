@@ -1,5 +1,5 @@
+import { INITIAL_MESSAGE, OFFLINE_MESSAGE } from "./constants";
 import ajax from "./ajax";
-import c from "./constants";
 import store from "./store";
 
 const status = {
@@ -14,8 +14,8 @@ export const loadMessageIfNotLoaded = async () => {
       const data = await response.json();
       store.commit("setMessage", data.message);
       status.loadMessageIfNotLoaded = "loaded";
-    } else if (store.state.message === c.INITIAL_MESSAGE) {
-      store.commit("setMessage", c.OFFLINE_MESSAGE);
+    } else if (store.state.message === INITIAL_MESSAGE) {
+      store.commit("setMessage", OFFLINE_MESSAGE);
       status.loadMessageIfNotLoaded = "offline";
     }
   }
