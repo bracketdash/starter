@@ -9,7 +9,7 @@ const status = {
 export const loadMessageIfNotLoaded = async () => {
   if (["fetching", "loaded"].indexOf(status.loadMessageIfNotLoaded) === -1) {
     status.loadMessageIfNotLoaded = "fetching";
-    const response = await ajax("GET /api/message");
+    const response = await ajax.get("/api/message");
     if (response.ok) {
       const data = await response.json();
       store.commit("setMessage", data.message);
