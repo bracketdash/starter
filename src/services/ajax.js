@@ -1,25 +1,25 @@
-const ajaxFn = (method, incomingUrl, ajaxConfig) => {
-  const urlStr = incomingUrl.startsWith("http") ? incomingUrl : window.location.origin + incomingUrl;
-  const urlObj = new URL(urlStr);
-  const params = new URLSearchParams(urlObj.search);
-  const fetchConfig = Object.assign({ method }, ajaxConfig);
-  if (fetchConfig.params) {
-    Object.keys(fetchConfig.params).forEach((key) => {
-      params.set(key, fetchConfig.params[key]);
-    });
-    urlObj.search = params.toString();
-    delete fetchConfig.params;
+const getUrl(url, params) {
+  if (!params) {
+      return url;
   }
-  if (fetchConfig.data) {
-    fetchConfig.body = JSON.stringify(ajaxConfig.data);
-    delete fetchConfig.data;
+  const urlObj = new URL(url);
+  const search = new URLSearchParams(urlObj.search);
+  Object.keys(params).forEach((key) => params.set(key, params[key]));
+  urlObj.search = search.toString();
+  return urlObj.toString();
+}
+
+const getFetch = (method, url, settings) => {
+  const config = Object.assign({ method }, settings);
+  if (settings.data) {
+    config.body = JSON.stringify(settings.data);
   }
-  return fetch(urlObj.toString(), fetchConfig);
+  return fetch(getUrl(url, settings.params), config);
 };
 
 export default {
-  get: (url, config) => ajaxFn("GET", url, config),
-  post: (url, config) => ajaxFn("POST", url, config),
-  put: (url, config) => ajaxFn("PUT", url, config),
-  delete: (url, config) => ajaxFn("DELETE", url, config),
+  get: (url, config) => getFetch("GET", url, config),
+  post: (url, config) => getFetch("POST", url, config),
+  put: (url, config) => getFetch("PUT", url, config),
+  delete: (url, config) => getFetch("DELETE", url, config),
 };
