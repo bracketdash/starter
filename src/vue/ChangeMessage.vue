@@ -1,8 +1,8 @@
 <script>
 import { reactive, watch } from "vue";
 
-import { loadMessageIfNotLoaded } from "../services/message";
-import store from "../services/store";
+import { loadMessageIfNotLoaded } from "../js/message";
+import store from "../js/store";
 
 export default {
   name: "ChangeMessage",
