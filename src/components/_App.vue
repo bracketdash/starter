@@ -15,13 +15,10 @@ export default {
 </template>
 
 <style scoped>
-#nav {
-  & a {
-    @apply font-bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+#nav a {
+  @apply font-bold;
+  &.router-link-exact-active {
+    color: var(--color-active-nav);
   }
 }
 </style>

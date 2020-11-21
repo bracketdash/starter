@@ -1,6 +1,6 @@
 export default (methodAndUrl, ajaxConfig) => {
   const [method, incomingUrl] = methodAndUrl.split(" ");
-  const urlStr = incomingUrl.startsWith("http") ? incomingUrl : window.location.href + incomingUrl.substring(1);
+  const urlStr = incomingUrl.startsWith("http") ? incomingUrl : window.location.origin + incomingUrl;
   const urlObj = new URL(urlStr);
   const params = new URLSearchParams(urlObj.search);
   const fetchConfig = Object.assign({ method }, ajaxConfig);

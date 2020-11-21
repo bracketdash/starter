@@ -1,5 +1,6 @@
 import ajax from "./ajax";
-import sharedState from "./sharedState";
+import c from "./constants";
+import store from "./store";
 
 const status = {
   loadMessageIfNotLoaded: "unrun",
@@ -11,10 +12,10 @@ export const loadMessageIfNotLoaded = async () => {
     const response = await ajax("GET /api/message");
     if (response.ok) {
       const data = await response.json();
-      sharedState.message = data.message;
+      store.commit("setMessage", data.message);
       status.loadMessageIfNotLoaded = "loaded";
-    } else {
-      sharedState.message = "Offline Message";
+    } else if (store.state.message === c.INITIAL_MESSAGE) {
+      store.commit("setMessage", c.OFFLINE_MESSAGE);
       status.loadMessageIfNotLoaded = "offline";
     }
   }

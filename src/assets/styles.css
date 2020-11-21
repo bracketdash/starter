@@ -1,0 +1,14 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+:root {
+  --color-body-text: #2c3e50;
+  --color-active-nav: #42b983;
+}
+
+#app {
+  color:var(--color-body-text);
+}
