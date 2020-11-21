@@ -1,5 +1,5 @@
 <script>
-import { loadMessageIfNotLoaded } from "../services/message";
+import { loadMessageIfNotLoaded } from "../js/message";
 
 export default {
   name: "MessageDisplay",
