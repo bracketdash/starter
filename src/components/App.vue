@@ -16,7 +16,7 @@ export default {
 
 <style scoped>
 #nav a {
-  @apply font-bold;
+  font-weight: bold;
   &.router-link-exact-active {
     color: var(--color-active-nav);
   }
