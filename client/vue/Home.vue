@@ -10,7 +10,7 @@ export default {
 
 <template>
   <div>
-    <img class="inline" alt="Vue logo" src="../assets/logo.png" />
+    <img class="inline" alt="Vue logo" src="../images/logo.png" />
     <MessageDisplay />
     <ChangeMessage />
   </div>
