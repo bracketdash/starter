@@ -1,17 +1,16 @@
 const api = require("./api");
+const cors = require("cors");
 const express = require("express");
 const path = require("path");
 
-/*
-TODO
-- Make a version of the server that only runs the API without serving ./client/dist
-- Make `yarn dev` also start the API server on a different port
-- Add logic to the front end to point api calls to the API dev server port if running in dev mode
-*/
-
 const app = express();
 
+app.use(cors());
 app.use("/api", api);
+
+app.get("/test", (req, res) => {
+  res.send({ ok: true });
+});
 
 app.use(express.static(path.resolve(__dirname, "../client/dist")));
 

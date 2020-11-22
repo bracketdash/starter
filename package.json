@@ -4,8 +4,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
+    "dev-client": "vite",
+    "dev-server": "node ./server/dev.js",
     "build": "vite build",
-    "prod": "node ./server/main.js",
+    "prod": "node ./server/prod.js",
+    "push": "git add -A && git commit -m 'update' && git push",
     "reset": "rm -rf dist node_modules && rm yarn.lock"
   },
   "dependencies": {
@@ -16,6 +19,7 @@
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.2",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "postcss-preset-env": "^6.7.0",
     "vite": "^1.0.0-rc.9"

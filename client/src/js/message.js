@@ -1,5 +1,5 @@
 import { INITIAL_MESSAGE, OFFLINE_MESSAGE } from "./constants";
-import ajax from "./ajax";
+import api from "./api";
 import store from "./store";
 
 const [UNRUN, FETCHING, LOADED, OFFLINE] = Array(4)
@@ -13,10 +13,9 @@ const status = {
 export const loadMessageIfNotLoaded = async () => {
   if (![FETCHING, LOADED].includes(status.loadMessageIfNotLoaded)) {
     status.loadMessageIfNotLoaded = FETCHING;
-    const response = await ajax.get("/api/message");
-    if (response.ok) {
-      const data = await response.json();
-      store.commit("setMessage", data.message);
+    const message = await api.getMessage();
+    if (message) {
+      store.commit("setMessage", message);
       status.loadMessageIfNotLoaded = LOADED;
       return;
     }
@@ -25,5 +24,4 @@ export const loadMessageIfNotLoaded = async () => {
     }
     status.loadMessageIfNotLoaded = OFFLINE;
   }
-  return;
 };
