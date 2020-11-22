@@ -1,3 +1,1 @@
-export default {
-  root: "./client",
-};
+export default { root: "./client" };

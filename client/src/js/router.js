@@ -5,11 +5,11 @@ export default createRouter({
   routes: [
     {
       path: "/",
-      component: () => import("../vue/Home.vue"),
+      component: () => import("../components/Home.vue"),
     },
     {
       path: "/about",
-      component: () => import("../vue/About.vue"),
+      component: () => import("../components/About.vue"),
     },
   ],
 });

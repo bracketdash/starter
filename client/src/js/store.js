@@ -1,5 +1,4 @@
 import { createStore } from "vuex";
-
 import { INITIAL_MESSAGE } from "./constants";
 
 export default createStore({

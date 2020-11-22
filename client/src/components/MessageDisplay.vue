@@ -11,6 +11,6 @@ export default {
 
 <template>
   <div>
-    <h1 class="text-3xl">{{ $store.state.message }}</h1>
+    <h1>{{ $store.state.message }}</h1>
   </div>
 </template>

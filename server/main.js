@@ -7,10 +7,10 @@ const app = express();
 
 app.use("/api", api);
 
-app.use(express.static(path.resolve(__dirname, "../dist")));
+app.use(express.static(path.resolve(__dirname, "../client/dist")));
 
 app.all("*", (_, res) => {
-  res.sendFile(path.resolve(__dirname, "../dist/index.html"));
+  res.sendFile(path.resolve(__dirname, "../client/dist/index.html"));
 });
 
 const port = 3000;
