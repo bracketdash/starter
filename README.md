@@ -5,12 +5,17 @@
 yarn
 ```
 
-### Run dev server
+### Run dev client
 ```
-yarn dev
+yarn dev-client // or just `yarn dev`
 ```
 
-### Build for production
+### Run dev server
+```
+yarn dev-server
+```
+
+### Build client `dist` folder
 ```
 yarn build
 ```
