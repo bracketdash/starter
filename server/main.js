@@ -12,13 +12,17 @@ app.get("/test", (req, res) => {
   res.send({ ok: true });
 });
 
-app.use(express.static(path.resolve(__dirname, "../client/dist")));
+if (process.argv.length < 3 || process.argv[2] !== "dev") {
+  app.use(express.static(path.resolve(__dirname, "../client/dist")));
+  app.all("*", (_, res) => {
+    res.sendFile(path.resolve(__dirname, "../client/dist/index.html"));
+  });
+}
 
-app.all("*", (_, res) => {
-  res.sendFile(path.resolve(__dirname, "../client/dist/index.html"));
-});
-
-const port = 3000;
+let port = 3000;
+if (process.argv[2] === "dev") {
+  port = 3001;
+}
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
