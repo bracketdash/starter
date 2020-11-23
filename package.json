@@ -6,7 +6,7 @@
     "dev": "vite",
     "dev-client": "vite",
     "dev-server": "node ./server/main.js dev",
-    "build": "vite build",
+    "build": "cp ./client/src/index.html ./client/index.html && vite build && rm ./client/index.html",
     "prod": "node ./server/main.js",
     "push": "git add -A && git commit -m 'update' && git push",
     "reset": "rm -rf node_modules ./client/dist && rm yarn.lock"
