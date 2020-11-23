@@ -9,7 +9,7 @@
     "build": "vite build",
     "prod": "node ./server/main.js",
     "push": "git add -A && git commit -m 'update' && git push",
-    "reset": "rm -rf dist node_modules && rm yarn.lock"
+    "reset": "rm -rf node_modules ./client/dist && rm yarn.lock"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
